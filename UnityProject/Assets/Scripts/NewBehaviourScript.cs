@@ -22,12 +22,17 @@ public class NewBehaviourScript : MonoBehaviour
 
     //有預設值的參數 選填式參數 呼叫時可不填寫
     //選填式參數只能寫在最右邊
-    private void shoot(int count, float speed, string prop = "無",string direction = "前方") 
+    private void shoot(int count, float speed, string prop = "無", string direction = "前方")
     {
-        print("弓箭數量:"+count);
-        print("弓箭速度:"+speed);
-        print("弓箭屬性:"+prop);
-        print("弓箭方向:"+direction);
+        print("弓箭數量:" + count);
+        print("弓箭速度:" + speed);
+        print("弓箭屬性:" + prop);
+        print("弓箭方向:" + direction);
+    }
+    //次方運算 回傳
+    private int Square(int number = 2)
+    {
+        return number * number;
     }
 
     //事件:在指定的時間會以指定次數執行的方法
@@ -43,5 +48,10 @@ public class NewBehaviourScript : MonoBehaviour
         shoot(1, 1.5f);
         shoot(10, 10.5f,"火屬性");
         shoot(3,2,direction:"前後方");
+
+        print(Square());      //當成傳回類型使用
+
+        int result = Square(9);//存放在區域欄位內
+        print(result);
     }
 }
