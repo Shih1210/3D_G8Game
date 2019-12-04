@@ -3791,6 +3791,8 @@ GameObject:
   - component: {fileID: 1954471658}
   - component: {fileID: 1954471657}
   - component: {fileID: 1954471659}
+  - component: {fileID: 1954471660}
+  - component: {fileID: 1954471661}
   m_Layer: 0
   m_Name: GameObject
   m_TagString: Untagged
@@ -3805,7 +3807,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1954471656}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 652e68158aac5c0489f46b77235cc512, type: 3}
   m_Name: 
@@ -3831,11 +3833,49 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1954471656}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: dfdaa51f5b2b1ef40b8827a21e3ccf72, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1954471660
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1954471656}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 96ece0334662e114bbf1a40892e8de57, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  A: 10
+  B: 3
+  C: 1
+  D: 1
+  E: 1
+  F: 10
+  G: 1.5
+  H: 99.9
+  hp: 50
+  key: 0
+  enemy: 0
+--- !u!114 &1954471661
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1954471656}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 48cef235d79599449b07e3da2e33369d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  openDoor: 0
+  score: 100
+  combo: 0
 --- !u!4 &1984269089 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4103606975893948, guid: 388d2ede35ec91345943f17a010818fc,
