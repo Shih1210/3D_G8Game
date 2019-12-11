@@ -15,7 +15,7 @@ public class LearnIf : MonoBehaviour
         }
     }
 
-    private void Update()
+   /** private void Update()
     {
         if (openDoor)
         {
@@ -44,7 +44,8 @@ public class LearnIf : MonoBehaviour
         {
             print("被當惹");
         }
-        if (combo >= 50&&combo<100)
+    
+        if (combo >= 50 && combo < 100)
         {
             print("攻擊2倍");
         }
@@ -52,9 +53,10 @@ public class LearnIf : MonoBehaviour
         {
             print("攻擊5倍");
         }
-        else if (combo >=150)
+        else if (combo >= 150)
         {
             print("攻擊10倍");
         }
     }
+    */
 }
