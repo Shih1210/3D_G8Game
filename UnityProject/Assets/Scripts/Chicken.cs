@@ -19,6 +19,9 @@ public class Chicken : MonoBehaviour
     public string Name ="Chicken ";
     #endregion
 
+    [Header("撿東西放的位置")]
+    public Rigidbody rigCatch;
+
     public Transform tran;
     public Rigidbody rig;
     public Animator ani;
@@ -32,6 +35,26 @@ public class Chicken : MonoBehaviour
         Run();
         Bark();
         Catch();
+    }
+
+    //觸發碰撞時持續執行(1秒約執行60次) 碰撞物件資訊
+    private void OnTriggerStay(Collider other)
+    {
+        print(other.name);
+
+        //如果碰撞物件的名稱 為 雞腿 撥放撿東西動畫
+        if(other.name== "Mushroom"&& ani.GetCurrentAnimatorStateInfo(0).IsName("撿東西"))
+        {
+            //物理.忽略碰撞(A碰撞，B碰撞)
+            Physics.IgnoreCollision(other, GetComponent<Collider>());
+            //碰撞物件.取得元件<泛型>
+            other.GetComponent<HingeJoint>().connectedBody = rigCatch;
+        }
+        if (other.name == "食盒" && ani.GetCurrentAnimatorStateInfo(0).IsName("撿東西"))
+        {
+            //碰撞物件.取得元件<泛型>
+            GameObject.Find("Mushroom").GetComponent<HingeJoint>().connectedBody = null;
+        }
     }
 
     #region 方法區域
